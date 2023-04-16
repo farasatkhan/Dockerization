@@ -18,4 +18,59 @@ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 docker-compose --version
 ```
 
+## Docker Cheat Sheet
 
+### Images
+
+Builds a Docker image with the specified name and a Dockerfile in the current directory.
+```bash
+docker build -t <image_name>
+```
+
+Builds a Docker image with the specified name and a Dockerfile in the current directory, ignoring the cache.
+```bash
+docker build -t <image_name> . –no-cache
+```
+
+Lists all Docker images that are currently stored on the host.
+```bash
+docker images
+```
+
+Lists all Docker images that are currently stored on the host.
+```bash
+docker image ls
+```
+
+Removes the specified Docker image from the host.
+```bash
+docker rmi <image_name>
+```
+
+Removes all unused Docker images, including intermediate images, from the host.
+```bash
+docker image prune
+```
+
+
+### Docker Hub
+
+Logs in to a Docker registry with the specified username.
+```bash
+docker login -u <username>
+```
+
+Pushes a Docker image with the specified name to a registry with the specified username.
+```bash
+docker push <username>/<image_name>
+```
+
+Searches for a Docker image with the specified name in Docker Hub or other registries.
+```bash
+docker search <image_name>
+```
+
+Downloads a Docker image with the specified name from a registry.
+```bash
+docker pull <image_name>
+```

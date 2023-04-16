@@ -1,12 +1,7 @@
-Dockerizing a Node.js Application
+# Dockerizing a Node.js Application
 This guide will show you how to create a Docker container for a simple Node.js application.
 
-Prerequisites
-Before getting started, you'll need to have the following installed on your system:
-
-Docker
-
-Instructions
+## Instructions
 Install Docker by running the following command in your terminal:
 
 ```bash

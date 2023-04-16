@@ -22,7 +22,6 @@ console.log("Hello World Docker!");
 Create a file named Dockerfile in the same directory as index.js with the following contents:
 
 ```bash
-Copy code
 FROM node:alpine
 COPY . /app
 WORKDIR /app

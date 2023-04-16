@@ -131,3 +131,21 @@ Displays resource usage statistics of all running Docker containers on the host.
 ```bash
 docker container stats
 ```
+
+### Docker Compose
+
+Runs the Docker Compose in detached mode.
+
+```bash
+sudo docker-compose up -d
+```
+
+Displays the status of containers in the Docker Compose.
+```bash
+sudo docker-compose ps
+```
+
+Stops and removes the containers, networks, and volumes defined in the Docker Compose.
+``` bash
+sudo docker-compose down
+```

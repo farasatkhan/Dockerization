@@ -1,0 +1,27 @@
+services:
+  laravel_app:
+    container_name: laravel_app
+    image: farasatkhan/roadrunner-ecommerce-store-laravel:latest
+    ports:
+      - 9000:80
+  
+  mysql_db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: roadrunner_db
+    volumes:
+      - ./roadrunner_db.sql:/docker-entrypoint-initdb.d/roadrunner.sql
+      - mysql_data:/var/lib/mysql
+    ports:
+    - 3306:3306
+  
+  phpmyadmin:
+    image: phpmyadmin:latest
+    ports:
+      - 9001:80
+    environment:
+      - PMA_ARBITRARY=1
+
+volumes:
+  mysql_data:
